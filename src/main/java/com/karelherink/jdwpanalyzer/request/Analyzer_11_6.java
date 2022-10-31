@@ -46,10 +46,10 @@ public class Analyzer_11_6 extends PacketAnalyzer {
 		Node startFrameInfo = new Node (new Node.Descriptor("StartFrame:"), new Node.Value(new Integer(startFrame)));
 		root.addChild(startFrameInfo);
 		
-        int lenght = (int) getVal(packet, index, 4);
+        int length = (int) getVal(packet, index, 4);
         index += 4;
-		Node lenghtInfo = new Node (new Node.Descriptor("Lenght:"), new Node.Value(new Integer(lenght)));
-		root.addChild(lenghtInfo);
+		Node lengthInfo = new Node (new Node.Descriptor("Length:"), new Node.Value(new Integer(length)));
+		root.addChild(lengthInfo);
 		
 		return root;
 	}

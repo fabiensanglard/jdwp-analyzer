@@ -198,20 +198,20 @@ public class MethodType extends Type {
     	private String name;
     	private String signature;
     	private String genericSignature;
-    	private Integer lenght;
+    	private Integer length;
     	private Integer frameIndex;
-		public Variable(Long codeIndex, String name, String signature, String genericSignature, Integer lenght, Integer frameIndex) {
+		public Variable(Long codeIndex, String name, String signature, String genericSignature, Integer length, Integer frameIndex) {
 			this.codeIndex = codeIndex;
 			this.name = name;
 			this.signature = signature;
 			this.genericSignature = genericSignature;
-			this.lenght = lenght;
+			this.length = length;
 			this.frameIndex = frameIndex;
 		}
 		public String toString() {
 			return "name:" + name + ",signature:" + signature 
 				+ ",genSignature:" + genericSignature + ",codeIndex:" + codeIndex + 
-				",length:" + lenght + ",frameIndex:" + frameIndex;
+				",length:" + length + ",frameIndex:" + frameIndex;
 		}		
     }
     

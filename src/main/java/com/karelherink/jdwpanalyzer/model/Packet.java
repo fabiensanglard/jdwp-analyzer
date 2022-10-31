@@ -50,7 +50,7 @@ public class Packet {
         byte header[] = new byte[11];
         is.readFully(header);
         
-        byte[] data = new byte[getDataLenght(header)];
+        byte[] data = new byte[getDataLength(header)];
         is.readFully(data);
 
         if (Packet.isResponse(header)) {
@@ -124,7 +124,7 @@ public class Packet {
     private static boolean isResponse(byte[] header) {
         return ((((header[8]) & 0xff) & 0x80) > 0);
     }
-    private static int getDataLenght(byte[] header) {
+    private static int getDataLength(byte[] header) {
         return getVal(header, 0, 4) - 11;
     }
     private static int getVal(byte[] header, int index, int n) {

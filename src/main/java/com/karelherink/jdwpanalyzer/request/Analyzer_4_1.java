@@ -38,10 +38,10 @@ public class Analyzer_4_1 extends PacketAnalyzer {
 		index += referenceTypeIDSize;
 		Node newArrayInfo = new Node(new Node.Descriptor("RefTypeID:", referenceType), new Node.Value(new Long(refTypeId)));
 		
-		int lenght = (int) getVal(packet, index, 4);
+		int length = (int) getVal(packet, index, 4);
 		index += 4;
-		Node lenghtInfo = new Node(new Node.Descriptor("ArrayLenght:"), new Node.Value(new Integer(lenght)));
-		newArrayInfo.addChild(lenghtInfo);
+		Node lengthInfo = new Node(new Node.Descriptor("ArrayLength:"), new Node.Value(new Integer(length)));
+		newArrayInfo.addChild(lengthInfo);
 		
 		return newArrayInfo;
 	}

@@ -64,11 +64,11 @@ public class Analyzer_6_5 extends PacketAnalyzer {
 			String genericSignature = (String) node.getValue().getRealValue();
 
 			node = (Node) iter.next();
-			Integer lenght = (Integer) node.getValue().getRealValue();
+			Integer length = (Integer) node.getValue().getRealValue();
 			node = (Node) iter.next();
 			Integer frameIndex = (Integer) node.getValue().getRealValue();
 			
-			MethodType.Variable variable = new MethodType.Variable(codeIndex, name, signature, genericSignature, lenght, frameIndex);
+			MethodType.Variable variable = new MethodType.Variable(codeIndex, name, signature, genericSignature, length, frameIndex);
 			variables.add(variable);
 		}
 		methType.setVariables((MethodType.Variable[]) variables.toArray(new MethodType.Variable[variables.size()]));
@@ -114,10 +114,10 @@ public class Analyzer_6_5 extends PacketAnalyzer {
             index += len;
             varsInfo.addChild(genericSignatureInfo);
 			            
-            int lenght = (int) getVal(packet, index, 4);
+            int length = (int) getVal(packet, index, 4);
             index += 4;
-			Node lenghtInfo = new Node(new Node.Descriptor("Lenght:"), new Node.Value(new Integer(lenght)));
-			varsInfo.addChild(lenghtInfo);
+			Node lengthInfo = new Node(new Node.Descriptor("Length:"), new Node.Value(new Integer(length)));
+			varsInfo.addChild(lengthInfo);
 			
             int frameIndex = (int) getVal(packet, index, 4);
             index += 4;
