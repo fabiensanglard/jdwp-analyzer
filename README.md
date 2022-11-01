@@ -67,7 +67,12 @@ log_dir = log directory path for replaying a debugging session
 ## Start the VM to be debugged
 
 ```
-$ java -agentlib:jdwp=transport=dt_shmem,server=y,suspend=y -cp target/jdwp-analyzer-1.0.jar Example
+$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y -cp target/jdwp-analyzer-1.0.jar Example
+```
+
+You should see the following output.
+
+```
 Listening for transport dt_socket at address: 49416
 ```
 
